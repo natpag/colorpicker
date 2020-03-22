@@ -7,28 +7,55 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: none;
   height: 100%;
 }
 
-main {
-  align-content: center;
+.grid-container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto;
+  padding: 10px;
+}
+
+div.grid-container {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.header {
+  grid-column: 1 / span 3;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.property {
+  grid-column: 2;
 }
 
 .slidecontainer {
+  grid-column: 3/4;
   width: 100%;
 }
 
 .slider {
   appearance: none;
   width: 100%;
-  /* Full-width */
-  height: 25px;
-  /* Specified height */
+  height: .5rem;
   background: #d3d3d3;
-  /* Grey background */
   outline: none;
-  /* Remove outline */
-  opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
+  opacity: 0.5;
+}
+
+.color-box {
+  width: 12rem;
+  height: 8rem;
+  grid-column: 1;
+  grid-row: 1;
+  background-color: #ccc;
+}
+
+text {
+  font-size: 1rem;
 }
