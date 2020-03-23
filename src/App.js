@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import HelloWorld from './components/HelloWorld'
 
 class App extends Component {
   state = {
@@ -24,6 +23,7 @@ class App extends Component {
       light: e.target.value,
     })
   }
+
   render() {
     const newColor = `hsl(${this.state.hue}, ${this.state.saturation}%, ${this.state.light}%)`
     console.log(newColor)
@@ -37,7 +37,7 @@ class App extends Component {
               style={{ backgroundColor: newColor }}
             ></div>
             <text>
-              color is currently hsl({this.state.hue},{this.state.saturation}%,{' '}
+              Color is currently hsl({this.state.hue},{this.state.saturation}%,
               {this.state.light}%)
             </text>
           </div>

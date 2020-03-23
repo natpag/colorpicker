@@ -13,13 +13,12 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: auto;
+  grid-template-columns: 30% 10% 40%;
+  grid-template-rows: 40% 15% 15% 15%;
   padding: 10px;
 }
 
 div.grid-container {
-  text-align: center;
   padding: 20px 0;
   font-size: 30px;
 }
@@ -28,6 +27,7 @@ div.grid-container {
   grid-column: 1 / span 3;
   font-size: 6rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .property {
@@ -49,13 +49,15 @@ div.grid-container {
 }
 
 .color-box {
-  width: 12rem;
+  width: 15rem;
   height: 8rem;
   grid-column: 1;
   grid-row: 1;
   background-color: #ccc;
+  margin: 1rem;
 }
 
 text {
   font-size: 1rem;
+  font-weight: lighter;
 }
