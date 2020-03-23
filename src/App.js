@@ -5,7 +5,6 @@ class App extends Component {
     hue: Math.round(Math.random() * 360),
     saturation: Math.round(Math.random() * 100),
     light: Math.round(Math.random() * 100),
-    value: Math.round(Math.random() * 100),
   }
   changeHue = e => {
     this.setState({
@@ -23,7 +22,13 @@ class App extends Component {
       light: e.target.value,
     })
   }
-
+  randomButton = e => {
+    this.setState({
+      hue: Math.round(Math.random() * 360),
+      saturation: Math.round(Math.random() * 100),
+      light: Math.round(Math.random() * 100),
+    })
+  }
   render() {
     const newColor = `hsl(${this.state.hue}, ${this.state.saturation}%, ${this.state.light}%)`
     console.log(newColor)
@@ -40,6 +45,8 @@ class App extends Component {
               Color is currently hsl({this.state.hue},{this.state.saturation}%,
               {this.state.light}%)
             </text>
+            <br></br>
+            <button onClick={this.randomButton}>Random Color</button>
           </div>
           <div className="property">H</div>
           <div className="slidecontainer">
